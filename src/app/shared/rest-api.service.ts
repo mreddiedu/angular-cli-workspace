@@ -22,7 +22,10 @@ export class RestApiService {
   // Http Options
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json', //'application/x-www-form-urlencoded',
+      
+     // 'Content-Type': 'application/x-www-form-urlencoded',
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
       'Authorization': 'Basic 53a78a1a-5c6a-4758-a628-a78ce966a6fb'
     })
   }  
@@ -90,7 +93,7 @@ export class RestApiService {
        errorMessage = error.error.message;
      } else {
        // Get server-side error
-       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+       errorMessage = `ServerSide Error Code: ${error.status}\nMessage: ${error.message}`;
      }
      window.alert(errorMessage);
      return throwError(errorMessage);

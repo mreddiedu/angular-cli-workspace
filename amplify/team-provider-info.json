@@ -22,5 +22,17 @@
             "StackName": "amplify-my-app-eddieenv-20190905212819",
             "StackId": "arn:aws:cloudformation:us-east-1:275171392125:stack/amplify-my-app-eddieenv-20190905212819/c313f8c0-d05e-11e9-839d-0e94286004bc"
         }
+    },
+    "envira": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-my-app-envira-20190907222707-authRole",
+            "UnauthRoleArn": "arn:aws:iam::275171392125:role/amplify-my-app-envira-20190907222707-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::275171392125:role/amplify-my-app-envira-20190907222707-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-my-app-envira-20190907222707-deployment",
+            "UnauthRoleName": "amplify-my-app-envira-20190907222707-unauthRole",
+            "StackName": "amplify-my-app-envira-20190907222707",
+            "StackId": "arn:aws:cloudformation:us-east-1:275171392125:stack/amplify-my-app-envira-20190907222707/4ffb9360-d1f9-11e9-9e43-0efda143af08"
+        }
     }
 }
