@@ -1,17 +1,60 @@
 <div class="container custom-container">
   <div class="col-md-12">
-    <h3 class="mb-3 text-center">Create Employee</h3>
+    <h2 class="mb-3 text-center">PostMates deliveryQuotes API </h2>
 
     <div class="form-group">
-      <input type="text" [(ngModel)]="employeeDetails.name" class="form-control" placeholder="dropoff_address">
+      <input type="text" [(ngModel)]="employeeDetails.name" class="form-control" placeholder="dropoff_address (required)">
     </div>
 
     <div class="form-group">
-      <input type="text" [(ngModel)]="employeeDetails.email" class="form-control" placeholder="pickup_address">
+      <input type="text" [(ngModel)]="employeeDetails.email" class="form-control" placeholder="pickup_address (required)">
     </div>
   
     <div class="form-group">
-      <button class="btn btn-success btn-lg btn-block" (click)="addEmployee()">Create Quote</button>
+      <button class="btn btn-success btn-lg btn-block" (click)="deliveryQuotes()">Create Quote</button>
+    </div>
+
+  </div>
+  <br>
+  <hr size = "10">
+
+  <div class="col-md-12">
+    <h2 class="mb-3 text-center">PostMates deliveries API (Under Construction!) </h2>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="dropoff_address (required)">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="dropoff_name (required)">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="dropoff_phone_number (required)">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="manifest (required)">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="manifest_items (required)">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="pickup_name (required)">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="pickup_address (required)">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="pickup_phone_number (required)">
+    </div>
+  
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" (click)="addEmployee()">Create Delivery</button>
     </div>
 
   </div>

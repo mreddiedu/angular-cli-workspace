@@ -11,7 +11,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class RestApiService {
   
   // Define API
-  apiURL = 'https://api.postmates.com/v1/customers/cus_MKi1NaDOhmfiw-/delivery_quotes';
+  apiURL = 'https://api.postmates.com';
 
   constructor(private http: HttpClient) { }
 
@@ -49,9 +49,9 @@ export class RestApiService {
   }  
 
 
-  // HttpClient API post() method => Create employee
+  // HttpClient API post() method => For Postmates delivery_quotes
   createEmployee(employee): Observable<Employee> {
-    return this.http.post<Employee>(this.apiURL, this.httpOptions)
+    return this.http.post<Employee>(this.apiURL+'/v1/customers/cus_MKi1NaDOhmfiw-/delivery_quotes', JSON.stringify(employee), this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.handleError)
@@ -76,6 +76,8 @@ export class RestApiService {
     )
   }
 
+  
+
   // HttpClient API delete() method => Delete employee
   deleteEmployee(id){
     return this.http.delete<Employee>(this.apiURL + '/employees/' + id, this.httpOptions)
@@ -93,7 +95,7 @@ export class RestApiService {
        errorMessage = error.error.message;
      } else {
        // Get server-side error
-       errorMessage = `ServerSide Error Code: ${error.status}\nMessage: ${error.message}`;
+       errorMessage = `Server Side Error Code: ${error.status}\nMessage: ${error.message}`;
      }
      window.alert(errorMessage);
      return throwError(errorMessage);

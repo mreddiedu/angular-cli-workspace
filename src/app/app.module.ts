@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 // Forms module
 import { FormsModule } from '@angular/forms';
 
+//Module for Interceptor
+import {InterceptorModule} from './interceptor.module';
+
 // Components
 import { EmployeeCreateComponent } from './employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
@@ -27,7 +30,8 @@ import { EmployeesListComponent } from './employees-list/employees-list.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    InterceptorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
